@@ -140,7 +140,7 @@ footer a {
   align-self: center;
 }
 
-.myWork button {
+.view-all-projects-button {
   align-self: center;
   margin-bottom: 100px;
 }
@@ -179,4 +179,34 @@ footer a {
   max-width: 90%;
   height: auto;
   align-content: center;
+}
+
+/* Media queries */
+@media screen and (max-width: 600px) {
+  .flexContainer {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .flexContainer div {
+    width: 100%;
+  }
+
+  .workGrid {
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-areas:
+      "image-1"
+      "content-1"
+      "image-2"
+      "content-2";
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 300px 300px 300px;
+    padding: 30px 50px 30px 50px;
+  }
+
+  .workGrid div h4,
+  .workGrid div p {
+    text-align: center;
+  }
 }
